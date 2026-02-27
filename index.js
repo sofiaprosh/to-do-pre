@@ -28,7 +28,7 @@ function createItem(item) {
 	textElement.textContent = item;
 	deleteButton.addEventListener('click', function () {
 		clone.remove();
-		let items = getTasksFromDOM();
+		const items = getTasksFromDOM();
 		saveTasks(items);
 	});
 
@@ -36,7 +36,7 @@ function createItem(item) {
 		const itemName = textElement.textContent;
 		const newItem = createItem(itemName);
 		listElement.prepend(newItem);
-		let items = getTasksFromDOM();
+		const items = getTasksFromDOM();
 		saveTasks(items);
 	});
 
@@ -46,7 +46,7 @@ function createItem(item) {
 	});
 	textElement.addEventListener("blur", function () {
 		textElement.setAttribute("contenteditable", "false");
-		let items = getTasksFromDOM();
+		const items = getTasksFromDOM();
 		saveTasks(items);
 	});
 
